@@ -21,11 +21,20 @@
 #ifndef CONTEXTMENU_H
 #define CONTEXTMENU_H
 
-#include <QSignalMapper>
+// #include <QSignalMapper>
 #include <QMenu>
+//
+// #include "Typedefs.h"
+#include "playlistinterface_ptr.h"
+#include "query_ptr.h"
+#include "artist_ptr.h"
+#include "album_ptr.h"
+#include "playlist_ptr.h"
+#include "source_ptr.h"
 
-#include "Typedefs.h"
 #include "DllMacro.h"
+
+class QSignalMapper;
 
 namespace Tomahawk
 {

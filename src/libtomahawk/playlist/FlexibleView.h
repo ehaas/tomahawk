@@ -20,7 +20,11 @@
 #define FLEXIBLEVIEW_H
 
 #include "ViewPage.h"
-#include "PlaylistInterface.h"
+// #include "PlaylistInterface.h"
+
+#include <QWidget>
+#include <QMetaType>
+
 #include "DllMacro.h"
 
 class QStackedWidget;

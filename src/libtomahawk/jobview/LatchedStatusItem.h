@@ -20,10 +20,12 @@
 #define LATCHEDSTATUSITEM_H
 
 #include "JobStatusItem.h"
-#include "Typedefs.h"
+// #include "Typedefs.h"
+#include "source_ptr.h"
 
 #include <QHash>
-#include <QPixmap>
+// #include <QPixmap>
+#include <QPointer>
 
 class LatchedStatusManager;
 

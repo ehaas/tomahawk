@@ -29,6 +29,8 @@
 #include "accounts/AccountDllMacro.h"
 #include "accounts/Account.h"
 
+#include <QIcon>
+
 #define MYNAME "ACCOUNTTWITTER"
 
 namespace Tomahawk

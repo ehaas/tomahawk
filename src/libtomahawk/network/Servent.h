@@ -24,22 +24,21 @@
 // time before new connection terminates if no auth received
 #define AUTH_TIMEOUT 180000
 
-#include <QtCore/QObject>
-#include <QtCore/QMap>
-#include <QtCore/QMutex>
-#include <QtCore/QSharedPointer>
-#include <QtCore/QTimer>
-#include <QtCore/QPointer>
-#include <QtNetwork/QTcpServer>
-#include <QtNetwork/QTcpSocket>
-#include <QtNetwork/QHostInfo>
-
-#include <qjson/parser.h>
-#include <qjson/serializer.h>
-#include <qjson/qobjecthelper.h>
-
-#include "Typedefs.h"
 #include "Msg.h"
+// #include "Typedefs.h"
+#include "peerinfo_ptr.h"
+#include "result_ptr.h"
+
+// #include <QtCore/QObject>
+// #include <QtCore/QMap>
+#include <QMutex>
+// #include <QtCore/QSharedPointer>
+// #include <QtCore/QTimer>
+#include <QPointer>
+#include <QTcpServer>
+#include <QTcpSocket>
+// #include <QtNetwork/QHostInfo>
+#include <QStringList>
 
 #include <boost/function.hpp>
 
@@ -65,10 +64,7 @@ class DLLEXPORT QTcpSocketExtra : public QTcpSocket
 Q_OBJECT
 
 public:
-    QTcpSocketExtra() : QTcpSocket()
-    {
-        QTimer::singleShot( AUTH_TIMEOUT, this, SLOT( authTimeout() ) ) ;
-    }
+    QTcpSocketExtra();
 
     QPointer<Connection> _conn;
     bool _outbound;

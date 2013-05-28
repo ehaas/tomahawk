@@ -20,18 +20,35 @@
 #ifndef TRACK_H
 #define TRACK_H
 
-#include <QObject>
-#include <QList>
-#include <QVariant>
+// #include "Typedefs.h"
+// #include "TrackData.h"
 
-#include "Typedefs.h"
-#include "TrackData.h"
+#include "PlaybackLog.h"
+
+#include "trackdata_ptr.h"
+#include "query_wptr.h"
+#include "track_wptr.h"
+#include "track_ptr.h"
+#include "source_ptr.h"
+#include "track_ptr.h"
+#include "query_ptr.h"
+#include "artist_ptr.h"
+#include "album_ptr.h"
+
+//
+// #include <QObject>
+// #include <QList>
+#include <QVariantMap>
 
 #include "DllMacro.h"
 
+class QPixmap;
+class QSize;
 
 namespace Tomahawk
 {
+
+class SocialAction;
 
 class DLLEXPORT Track : public QObject
 {

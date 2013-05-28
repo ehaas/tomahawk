@@ -31,9 +31,12 @@
 #include "SourceList.h"
 #include "Artist.h"
 #include "Album.h"
+#include "Track.h"
 
 #include "utils/ImageRegistry.h"
 #include "utils/Logger.h"
+
+#include <QSignalMapper>
 
 using namespace Tomahawk;
 
